@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    var calculateExperience = () => {
+    (() => {
         var startDate = new Date('February 1, 2019');
         // Get the current date
         var currentDate = new Date();
@@ -51,6 +51,5 @@ window.addEventListener('DOMContentLoaded', event => {
         if (experience) {
             experience.innerHTML = `${years} Years ${months} ${months > 1 ? 'Months' : 'Month'} ${days} ${days > 1 ? 'Days' : 'Day'}`;
         }
-    }
-    calculateExperience()
+    })()
 });
