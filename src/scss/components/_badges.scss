@@ -1,0 +1,63 @@
+// Define your badge styles
+
+$badge-padding-y: 0.25rem;
+$badge-padding-x: 0.5rem;
+$badge-border-radius: 0.25rem;
+$badge-success-bg: #28a745;
+$badge-success-color: #fff;
+
+@function random1() {
+    @return random(255);
+  }
+  
+  @function random-color() {
+    $red: random1();
+    $green: random1();
+    $blue: random1();
+    @return rgb($red, $green, $blue);
+  }
+  
+  @mixin random-background-color {
+    background-color: random-color();
+  }
+  
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: $badge-border-radius;
+}
+
+// Primary badge style
+.badge-primary {
+    background-image: linear-gradient(147deg, #fe8a39 0%, #bd5d38 74%);
+  color: $badge-success-color;
+}
+
+// Success badge style
+.badge-random {
+    @include random-background-color;
+    color: $badge-success-color;
+  }
+
+// Pill-style badge
+.badge-pill {
+  border-radius: 10rem; // Use a high value to create a circular badge
+}
+
+// Apply styles to an element with the badge class
+.my-badge {
+  @extend .badge;
+}
+
+// Apply styles to a success badge with the badge-pill style
+.my-primary-badge {
+  @extend .badge-primary;
+  @extend .badge-pill;
+}
