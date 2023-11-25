@@ -14,6 +14,7 @@ html(lang='en')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
+        script(src='https://unpkg.com/swiper/swiper-bundle.min.js', crossorigin='anonymous')
 
         // Google fonts
         link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
@@ -22,6 +23,7 @@ html(lang='en')
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
         link(href="assets/font-mfizz/font-mfizz.css", rel="stylesheet")
+        link(href="https://unpkg.com/swiper/swiper-bundle.min.css", rel="stylesheet")
 
     body#page-top
 
@@ -39,6 +41,8 @@ html(lang='en')
                         a.nav-link.js-scroll-trigger(href='#about') About
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#experience') Experience
+                    li.nav-item
+                        a.nav-link.js-scroll-trigger(href='#projects') Projects
                     li.nav-item
                         a.nav-link.js-scroll-trigger(href='#education') Education
                     li.nav-item
@@ -116,6 +120,44 @@ html(lang='en')
                         .flex-shrink-0
                             span.text-primary February 2019 - July 2020
 
+            hr.m-0
+
+            // Projects
+            section#projects.resume-section
+               .resume-section-content
+                    h2.mb-5 Projects
+
+                    .blog-slider
+                        .blog-slider__wrp.swiper-wrapper
+                            .blog-slider__item.swiper-slide
+                                .blog-slider__img
+                                    img.card-img-top.img-fluid(src="assets/img/kanban.png")
+                                .blog-slider__content
+                                    span.blog-slider__code 26 December 2019
+                                    .blog-slider__title React Kanban
+                                    .blog-slider__text In a React Kanban app, tasks are represented as cards, and these cards move through different stages or columns on a board, such as "To Do," "In Progress," and "Done." Users can easily drag and drop cards between columns to update the status of tasks, providing a visual representation of the workflow.
+                                    a.blog-slider__button(href="https://rajbits-kanban.netlify.app/", target="_blank") Visit
+                                    a.blog-slider__github(href="https://github.com/Rajkumarbitling/task-kanban", target="_blank") Github
+
+                            .blog-slider__item.swiper-slide
+                                .blog-slider__img
+                                    img.card-img-top.img-fluid(src="https://picsum.photos/seed/1/800/600")
+                                .blog-slider__content
+                                    span.blog-slider__code 26 December 2019
+                                    .blog-slider__title Lorem Ipsum Dolor
+                                    .blog-slider__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
+                                    a.blog-slider__button(href="") READ MORE
+
+                            .blog-slider__item.swiper-slide
+                                .blog-slider__img
+                                    img.card-img-top.img-fluid(src="https://picsum.photos/seed/1/800/600")
+                                .blog-slider__content
+                                    span.blog-slider__code 26 December 2019
+                                    .blog-slider__title Lorem Ipsum Dolor
+                                    .blog-slider__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? 
+                                    a.blog-slider__button(href="") READ MORE
+                        
+                        .blog-slider__pagination
             hr.m-0
 
             // Education

@@ -6,7 +6,6 @@
 //
 // Scripts
 // 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -52,4 +51,26 @@ window.addEventListener('DOMContentLoaded', event => {
             experience.innerHTML = `${years} Years ${months} ${months > 1 ? 'Months' : 'Month'} ${days} ${days > 1 ? 'Days' : 'Day'}`;
         }
     })()
+
+    // corousel slide
+
+    var swiper = new Swiper('.blog-slider', {
+        spaceBetween: 30,
+        effect: 'fade',
+        loop: false,
+        mousewheel: {
+          invert: false,
+        },
+        // autoplay: {
+        //     delay: 4000,
+        //     disableOnInteraction: true,
+        // },
+        // autoHeight: true,
+        pagination: {
+          el: '.blog-slider__pagination',
+          clickable: true,
+        }
+    });
+      
+      
 });
