@@ -25,6 +25,14 @@ html(lang='en')
         link(href="assets/font-mfizz/font-mfizz.css", rel="stylesheet")
         link(href="https://unpkg.com/swiper/swiper-bundle.min.css", rel="stylesheet")
 
+        // Google tag (gtag.js)
+        script(async src='https://www.googletagmanager.com/gtag/js?id=G-F5ZBPT3EK8')
+        script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date())
+        gtag('config', 'G-F5ZBPT3EK8')
+
     body#page-top
 
         // Navigation
@@ -129,6 +137,20 @@ html(lang='en')
 
                     .blog-slider
                         .blog-slider__wrp.swiper-wrapper
+                            .blog-slider__item.swiper-slide
+                                .blog-slider__img
+                                    img.card-img-top.img-fluid(src="assets/img/pathVisualizer.png")
+                                .blog-slider__content
+                                    .blog-slider__title Path Visualiser
+                                    .blog-slider__text The "Path Visualizer" project is a web application designed to visually demonstrate various pathfinding algorithms in action. It allows users to select different algorithms, such as Dijkstra's, A Star, and DFS, to see how they navigate through a grid to find the shortest path between two points. This interactive tool is useful for educational purposes, helping users understand the mechanics and efficiency of each algorithm.
+                                    div.pb-2
+                                        span.badge.badge-pill.badge-primary NextJS
+                                        span.badge.badge-pill.badge-primary Typescript
+                                        span.badge.badge-pill.badge-primary Bootstrap
+                                        span.badge.badge-pill.badge-primary Lodash
+                                    a.blog-slider__button(href="https://rajbits-path-visualizer.vercel.app/pathvisualizer", target="_blank") Visit
+                                    a.blog-slider__github(href="https://github.com/Rajkumarbitling/pathVisualizer", target="_blank") Github
+
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
                                     img.card-img-top.img-fluid(src="assets/img/Netflix.png")
@@ -265,12 +287,20 @@ html(lang='en')
                                 span.small Node Js
                         li.list-inline-item.text-center
                             div.d-flex.flex-column
+                                i.fab.fa-tumblr(title='Typescript')
+                                span.small Typescript
+                        li.list-inline-item.text-center
+                            div.d-flex.flex-column
                                 i.fab.fa-vuejs(title='Vuex')
                                 span.small Vuex
                         li.list-inline-item.text-center
                             div.d-flex.flex-column
                                 i.fab.fa-react(title='Redux')
                                 span.small Redux
+                        li.list-inline-item.text-center
+                            div.d-flex.flex-column
+                                i.fab.fa-docker(title='Docker')
+                                span.small Docker
                     .subheading.mb-3 Frameworks
                     ul.list-inline.dev-icons
                         li.list-inline-item.text-center
@@ -326,7 +356,7 @@ html(lang='en')
                         li.list-inline-item.text-center
                             div.d-flex.flex-column
                                 i.icon-mysql(title='SQL')
-                                span.small SQL
+                                span.small MySQL
                         li.list-inline-item.text-center
                             div.d-flex.flex-column
                                 i.icon-oracle(title='Oracle SQL')
