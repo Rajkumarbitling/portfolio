@@ -13,12 +13,12 @@ html(lang='en')
         link(rel='icon', type='image/x-icon', href='assets/img/favicon.ico')
 
         // Font Awesome icons (free version)
-        script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
-        script(src='https://unpkg.com/swiper/swiper-bundle.min.js', crossorigin='anonymous')
+        script(defer, src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
+        script(defer, src='https://unpkg.com/swiper/swiper-bundle.min.js', crossorigin='anonymous')
 
         // Google fonts
-        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='stylesheet', type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='stylesheet', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700', rel='preconnect', type='text/css')
+        link(href='https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i', rel='preconnect', type='text/css')
 
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
@@ -26,7 +26,7 @@ html(lang='en')
         link(href="https://unpkg.com/swiper/swiper-bundle.min.css", rel="stylesheet")
 
         // Google tag (gtag.js)
-        script(async src='https://www.googletagmanager.com/gtag/js?id=G-F5ZBPT3EK8')
+        script(async, defer, src='https://www.googletagmanager.com/gtag/js?id=G-F5ZBPT3EK8')
         script.
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -78,11 +78,11 @@ html(lang='en')
                         span#experiencePeriod 4 years
                         | of expertise in front-end development, showcasing a deep passion for crafting responsive website designs. A staunch advocate of the mobile-first approach, dedicated to creating visually appealing and user-friendly digital experiences.
                     .social-icons
-                        a.social-icon(href='https://linkedin.com/in/rajkumar-bitling', target="_blank")
+                        a.social-icon.linkedin(href='https://linkedin.com/in/rajkumar-bitling', target="_blank")
                             i.fab.fa-linkedin-in
-                        a.social-icon(href='https://github.com/Rajkumarbitling', target="_blank")
+                        a.social-icon.github(href='https://github.com/Rajkumarbitling', target="_blank")
                             i.fab.fa-github
-                        a.social-icon(href='https://wa.me/8898506236/?text=Hello%20Rajkumar', target="_blank")
+                        a.social-icon.whatsapp(href='https://wa.me/8898506236/?text=Hello%20Rajkumar', target="_blank")
                             i.fab.fa-whatsapp
 
             hr.m-0
@@ -139,7 +139,7 @@ html(lang='en')
                         .blog-slider__wrp.swiper-wrapper
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/pathVisualizer.png")
+                                    img.card-img-top.img-fluid(src="assets/img/pathVisualizer.png" alt="Path Visualizer")
                                 .blog-slider__content
                                     .blog-slider__title Path Visualiser
                                     .blog-slider__text The "Path Visualizer" project is a web application designed to visually demonstrate various pathfinding algorithms in action. It allows users to select different algorithms, such as Dijkstra's, A Star, and DFS, to see how they navigate through a grid to find the shortest path between two points. This interactive tool is useful for educational purposes, helping users understand the mechanics and efficiency of each algorithm.
@@ -153,7 +153,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/Netflix.png")
+                                    img.card-img-top.img-fluid(src="assets/img/Netflix.png" alt="Netflix Clone")
                                 .blog-slider__content
                                     .blog-slider__title Netflix Clone
                                     .blog-slider__text A Netflix clone typically refers to creating a user interface that closely resembles Netflix's design, implementing video streaming capabilities, and incorporating features such as user authentication, content categorization.
@@ -172,7 +172,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/admin-panel.png")
+                                    img.card-img-top.img-fluid(src="assets/img/admin-panel.png" alt="Netflix Clone Admin Panel")
                                 .blog-slider__content
                                     .blog-slider__title Netflix Clone Admin Panel
                                     .blog-slider__text A Netflix clone admin panel would typically include features for managing content, user accounts, analytics, and possibly subscription details. 
@@ -191,7 +191,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/promptopia.png")
+                                    img.card-img-top.img-fluid(src="assets/img/promptopia.png" alt="Promptopia app")
                                 .blog-slider__content
                                     .blog-slider__title Promptopia
                                     .blog-slider__text A website offering diverse AI prompts allows users to discover and copy prompts for various purposes, enabling them to paste them into different AI models. These prompts cover a range of applications, including creative writing, content generation, and language translation. Users can leverage the versatility of AI models by pasting these prompts into platforms like OpenAI's GPT to receive contextually relevant and coherent responses.
@@ -206,7 +206,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/travel-log.png")
+                                    img.card-img-top.img-fluid(src="assets/img/travel-log.png" alt="Travel logs app")
                                 .blog-slider__content
                                     .blog-slider__title Travel Logs
                                     .blog-slider__text A web platform captures and organizes travel logs for individual users, offering convenient filtering options. Users can efficiently download the organized travel data in Excel format for easy accessibility and analysis.
@@ -221,7 +221,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/kanban.png")
+                                    img.card-img-top.img-fluid(src="assets/img/kanban.png" alt="Kanban app")
                                 .blog-slider__content
                                     .blog-slider__title React Kanban
                                     .blog-slider__text In a React Kanban app, tasks are represented as cards, and these cards move through different stages or columns on a board, such as "To Do," "In Progress," and "Done." Users can easily drag and drop cards between columns to update the status of tasks, providing a visual representation of the workflow.
@@ -234,7 +234,7 @@ html(lang='en')
 
                             .blog-slider__item.swiper-slide
                                 .blog-slider__img
-                                    img.card-img-top.img-fluid(src="assets/img/cmx.png")
+                                    img.card-img-top.img-fluid(src="assets/img/cmx.png" alt="CMX UI app")
                                 .blog-slider__content
                                     .blog-slider__title CMX UI/UX
                                     .blog-slider__text A single-page application with a responsive UI/UX design ensures seamless user interaction across various devices by adapting to different screen sizes.
