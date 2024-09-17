@@ -31,26 +31,40 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
     (() => {
-        var startDate = new Date('February 1, 2019');
-        // Get the current date
-        var currentDate = new Date();
+        const calculateExperience = (jobs) => {
+            let totalMilliseconds = 0;
 
-        // Calculate the difference in milliseconds
-        var timeDifference = currentDate - startDate;
+            jobs.forEach(job => {
+                const startDate = new Date(job.start);
+                const endDate = job.end === "present" ? new Date() : new Date(job.end);
+                totalMilliseconds += endDate - startDate;
+                console.log('Start Date:', startDate, 'End Date:', endDate);
+            });
 
-        var years = Math.floor(timeDifference / (365.25 * 24 * 60 * 60 * 1000));
-        var remainingMilliseconds = timeDifference % (365.25 * 24 * 60 * 60 * 1000);
-    
-        var months = Math.floor(remainingMilliseconds / (30.44 * 24 * 60 * 60 * 1000));
-        remainingMilliseconds %= (30.44 * 24 * 60 * 60 * 1000);
-    
-        var days = Math.floor(remainingMilliseconds / (24 * 60 * 60 * 1000));
+            const years = Math.floor(totalMilliseconds / (365.25 * 24 * 60 * 60 * 1000));
+            let remainingMilliseconds = totalMilliseconds % (365.25 * 24 * 60 * 60 * 1000);
+
+            const months = Math.floor(remainingMilliseconds / (30.44 * 24 * 60 * 60 * 1000));
+            remainingMilliseconds %= (30.44 * 24 * 60 * 60 * 1000);
+
+            const days = Math.floor(remainingMilliseconds / (24 * 60 * 60 * 1000));
+
+            return { years, months, days };
+        };
+
+        const jobs = [
+            { start: "2019-02-01", end: "2020-07-31" },
+            { start: "2020-08-01", end: "2022-06-30" },
+            { start: "2022-07-01", end: "2024-05-17" }
+        ];
+
+        const { years, months, days } = calculateExperience(jobs);
 
         const experience = document.body.querySelector('#experiencePeriod');
         if (experience) {
-            experience.innerHTML = `${years} Years ${months} ${months > 1 ? 'Months' : 'Month'} ${days} ${days > 1 ? 'Days' : 'Day'}`;
+            experience.innerHTML = `${years} Year${years !== 1 ? 's' : ''} ${months} Month${months !== 1 ? 's' : ''} ${days} Day${days !== 1 ? 's' : ''}`;
         }
-    })()
+    })();
 
     // corousel slide
 
