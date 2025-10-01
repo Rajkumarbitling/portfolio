@@ -50,7 +50,8 @@ window.addEventListener('DOMContentLoaded', event => {
         const jobs = [
             { start: "2019-02-01", end: "2020-07-31" },
             { start: "2020-08-01", end: "2022-06-30" },
-            { start: "2022-07-01", end: "2024-05-17" }
+            { start: "2022-07-01", end: "2024-05-17" },
+            { start: "2024-10-16", end: "present" }
         ];
 
         const { years, months, days } = calculateExperience(jobs);
